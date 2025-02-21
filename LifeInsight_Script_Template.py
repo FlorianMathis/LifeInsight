@@ -1,5 +1,4 @@
 # Import required packages
-
 import time
 import socket
 import base64
@@ -73,7 +72,6 @@ def assistOpenAI(image, text):
 	  ],
 	  "max_tokens": 300
 	}
-
 	response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
 	return response.json()['choices'][0]['message']['content']
 
@@ -113,37 +111,22 @@ def store_AIoutput(text):
    file.close() 
 
 def text_to_speech(text):
-    # Initialize gTTS with the text to convert
     speech = gTTS(text, lang="de")
-
-    # Save the audio file to a temporary file
     speech_file = current_dir + 'speech.mp3'
     speech.save(speech_file)
-
-    # Play the audio file
-
     file_path = current_dir + 'speech.mp3'
-    #playsound(file_path)
     pygame.mixer.music.load(file_path)
     pygame.mixer.music.play()
 
- 
 def obfuscateImage(img):    
-    # Converting BGR image into a RGB image 
-    #image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)   
-    # plotting the original image 
     face_cascade = cv2.CascadeClassifier(current_dir+'haarcascade_frontalface_alt.xml')
     faces = face_cascade.detectMultiScale(img, 1.1, 5)
 
     for (x, y, w, h) in faces:
         roi = img[y:y+h, x:x+w]
-        # apply gaussian blur to face rectangle
         roi = cv2.GaussianBlur(roi, (17, 17), 30)
-        # add blurred face on original image to get final image
         img[y:y+roi.shape[0], x:x+roi.shape[1]] = roi
     cv2.imwrite(current_dir + timestamp+"_image.jpg",img)
-
-print("reading")
 
 def button_callback(channel):
             source = takePicture()
@@ -151,7 +134,7 @@ def button_callback(channel):
             obfuscateImage(cv2.imread(source))  
             print("timestamp" +source)
             base64_image = encode_image(source)
-            text = recognize_from_microphone() #pre-defined by user
+            text = recognize_from_microphone() 
             if text != "Try again.":
             	audioFeedback()
             	store_prompt(text)
@@ -169,4 +152,3 @@ GPIO.add_event_detect(10,GPIO.RISING,callback=button_callback)
 
 message = input ("Press key to quit.")
 GPIO.cleanup()
-
