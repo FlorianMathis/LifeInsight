@@ -3,13 +3,9 @@ We present LifeInsight, an AI-powered assistive wearable equipped with an on-bod
 
 ![Image of the prototype.](https://github.com/FlorianMathis/LifeInsight/blob/main/LifeInsight_Pipeline.png)
 
-
-## Hardware Used
-LifeInsight consists of a mixture of off-the-shelf hardware, with additional 3D printing for the camera mount and the button. As computing device we used a Raspberry Pi 4.
-
 ## 📦 Components List  
 
-Here are the key components used in this project:  
+LifeInsight consists of a mixture of off-the-shelf hardware, with additional 3D printing for the camera mount and the button. As computing device we used a Raspberry Pi 4. Here are the key components used in this project:  
 
 ### 🎥 Camera  
 - **Model:** Raspberry Pi 3 Camera  
