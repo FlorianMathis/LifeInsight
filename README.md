@@ -10,13 +10,32 @@ Experimental template code for additional testing.
 ## Hardware Used
 LifeInsight consists of a mixture of off-the-shelf hardware, with additional 3D printing for the camera mount and the button. As computing device we used a Raspberry Pi 4.
 
-Camera: Raspberry Pi 3 camera (Sony IMX708 image sensor)
-Microphone: PowerGuard Mini USB Lavalier
-Powerbank: Anker PowerCore III Sense 20K
-Fashionable Bum Bag: Eastpak Bum Bag
-Button: Tactile Switch Panel PCB Mount Momentary TACT Switch Push Button (Arduino Kit, 6x6x5mm)
-Display for Development: Joy-it Raspberry Pi Display-Modul
-Speaker: LogiLink SP0057
+## 📦 Components List  
+
+Here are the key components used in this project:  
+
+### 🎥 Camera  
+- **Model:** Raspberry Pi 3 Camera  
+- **Sensor:** Sony IMX708  
+
+### 🎤 Microphone  
+- **Model:** PowerGuard Mini USB Lavalier  
+
+### 🔋 Power Supply  
+- **Model:** Anker PowerCore III Sense 20K  
+
+### 🎒 Carrying Case  
+- **Model:** Eastpak Bum Bag  
+
+### 🔘 Button  
+- **Model:** Tactile Switch Panel PCB Mount  
+- **Specs:** Momentary TACT Switch (6x6x5mm, Arduino Kit)  
+
+### 🖥️ Display (for Development)  
+- **Model:** Joy-it Raspberry Pi Display-Modul  
+
+### 🔊 Speaker  
+- **Model:** LogiLink SP0057  
 
 
 
